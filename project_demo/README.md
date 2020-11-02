@@ -1,14 +1,19 @@
+Project 2: Buzz Blink Toy
+-------------------------
+
 ## Description
-This directory contains demo programs that demonstrate basic I/O using timer and button interrupts.
+This program utilizes leds, buttons, and a buzzer to do a certain function
+based on which button you press.
 
-Program | Description
-------- | -----------
-Blink   | Uses timer interrupts to flash the LEDs in a silly pattern.
-Button  | Uses interrupts to detect when a switch is pressed or released.
-Buzzer  | Emits a single continuous note from the buzzer.
+## Compile and Run:
+1. Plug the MSP430 into your computer.
+2. Once inside the project_demo directory, type 'make load' and the program
+will load onto the MSP430.
+3. To clear files in directory, type 'make clean' to remove any unnecessary files.
 
-## How to Use
-
-The Makefile in this direcory contains rules to run the Makefile in each demo directory. Use **make** in this directory to build all demo programs and the timer library. Once the programs are built, you can load the program onto the MSP430 by changing into the corresponding demo directory and using **make load**.
-
-You may use **mspdebug rf2500 "erase"** to clear a program from the MSP430.
+Button | Function
+------ | --------
+S1     | Flashing red led
+S2     | Siren w/ red and green leds
+S3     | Dims red led to %25 brightness
+S4     | Toggles green led
